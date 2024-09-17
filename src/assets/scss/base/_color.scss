@@ -1,0 +1,15 @@
+@use '/src/assets/scss/utils/variables' as *;
+
+// make UI jit color
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --color-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  --color-text-on-primary: #fff;
+  --color-surface: #fff;
+  --color-text-gray: #8999b9;
+  --color-surface-LightBlue: #f9fafb;
+}
